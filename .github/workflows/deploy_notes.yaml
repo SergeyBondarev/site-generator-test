@@ -34,7 +34,7 @@ jobs:
           sudo mv hugo /usr/local/bin/hugo
 
       - name: Generate site
-        run: hugo -s ./output -d ./public
+        run: hugo -s ./processed_files -d ./public
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
