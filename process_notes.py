@@ -1,8 +1,10 @@
 import os
 import subprocess
+from pathlib import Path
 
-INPUT_DIR = "./markdown_files"
-OUTPUT_DIR = "./processed_files"
+
+INPUT_DIR = Path(__file__).parent / "markdown_files"
+OUTPUT_DIR = Path(__file__).parent / "processed_files"
 
 def process_latex(file_path):
     output_path = os.path.join(OUTPUT_DIR, os.path.basename(file_path))
