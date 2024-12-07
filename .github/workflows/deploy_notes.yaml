@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: pip install markdown
 
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
       - name: Process notes
         run: python process_notes.py
 
