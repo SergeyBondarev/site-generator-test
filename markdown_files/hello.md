@@ -8,5 +8,5 @@ Todo list:
 Some latex:
 
 $$
-x^2 + y^2 = 1.
+x^2 + y^2 = 1, \quad x \in [-1, 1], \quad y \in [-1, 1].
 $$
