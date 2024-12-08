@@ -81,6 +81,8 @@ jobs:
 
       - name: Add MathJax support
         run: |
+          echo "=== Directory structure ==="
+          tree || find . -type d
           mkdir -p layouts/partials/hooks
           touch layouts/partials/hooks/head-end.html
           
