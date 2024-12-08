@@ -59,6 +59,9 @@ jobs:
       - name: Generate site
         run: hugo
 
+      - name: Log markdown files
+        run: ls -a ./contents/posts
+
       - name: Log content
         run: ls -a ./public
 
