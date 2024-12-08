@@ -74,15 +74,7 @@ jobs:
 
       - name: Add MathJax support
         run: |
-          echo "=== Directory structure ==="
-          tree || find . -type d
-          mkdir -p site/layouts/_default/
-          touch site/layouts/_default/baseof.html
-          
-          echo '<head>
-          <meta charset="utf-8">
-          <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-          <script>
+          echo '<script>
           MathJax = {
             tex: {
               inlineMath: [["$", "$"], ["\\(", "\\)"]],
@@ -91,8 +83,7 @@ jobs:
             }
           };
           </script>
-          <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head>
-          <body>{{ block "main" . }}{{ end }}{{ block "footer" . }}{{ end }}</body>' > site/layouts/_default/baseof.html
+          <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>' >> site/themes/ananke/layouts/partials/head-additions.html
 
       - name: Generate site
         run: |
