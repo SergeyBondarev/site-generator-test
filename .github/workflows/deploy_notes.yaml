@@ -45,7 +45,8 @@ jobs:
             hugo new site site
             cd site
             echo 'title = "My blog post"' > config.toml
-            git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+            # git init
+            # git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
             echo "theme = 'ananke'" >> hugo.toml
           else
             echo "Hugo site found. Skipping creation step."
