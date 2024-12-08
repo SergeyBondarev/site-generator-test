@@ -43,6 +43,7 @@ jobs:
           if [ ! -f config.toml ] && [ ! -f config.yaml ] && [ ! -f config.json ]; then
             echo "Hugo site not found. Creating a new site..."
             hugo new site site
+            cd site
             echo 'title = "My blog post"' > config.toml
             git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
             echo "theme = 'ananke'" >> hugo.toml
