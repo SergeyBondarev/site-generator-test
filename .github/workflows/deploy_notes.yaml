@@ -37,7 +37,7 @@ jobs:
         run: |
           if [ ! -f config.toml ] && [ ! -f config.yaml ] && [ ! -f config.json ]; then
             echo "Hugo site not found. Creating a new site..."
-            hugo new site .
+            hugo new site site
             echo 'title = "My blog post"' > config.toml
             git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
             echo "theme = 'ananke'" >> hugo.toml
@@ -45,8 +45,14 @@ jobs:
             echo "Hugo site found. Skipping creation step."
           fi
 
+      - name: Move markdown files
+        run: |
+            cd site
+            mkdir ./content/posts
+            cp ../markdown_files/hello.md ./content/posts/hello.md
+
       - name: Generate site
-        run: hugo -s ./processed_files -d ./public
+        run: hugo
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
