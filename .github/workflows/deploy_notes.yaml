@@ -79,7 +79,7 @@ jobs:
           hugo --minify --baseURL "https://sergeybondarev.github.io/site-generator-test/"
           ls -la .
 
-            - name: Add MathJax support
+      - name: Add MathJax support
         run: |
           cd site
           mkdir -p layouts/partials/hooks
