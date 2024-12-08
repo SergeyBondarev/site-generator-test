@@ -29,8 +29,8 @@ jobs:
 
       - name: Install Hugo
         run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v0.118.2/hugo_0.118.2_Linux-64bit.tar.gz
-          tar -xzf hugo_0.118.2_Linux-64bit.tar.gz
+          wget https://github.com/gohugoio/hugo/releases/download/v0.135.0/hugo_0.135.0_Linux-64bit.tar.gz
+          tar -xzf hugo_0.135.0_Linux-64bit.tar.gz
           sudo mv hugo /usr/local/bin/hugo
 
       - name: Create Hugo site if missing
