@@ -81,7 +81,6 @@ jobs:
 
       - name: Add MathJax support
         run: |
-          cd site
           mkdir -p layouts/partials/hooks
           touch layouts/partials/hooks/head-end.html
           
