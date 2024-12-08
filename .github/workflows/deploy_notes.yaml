@@ -23,14 +23,14 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
-        run: pip install markdown
+      # - name: Install dependencies
+      #   run: pip install markdown
 
-      - name: Install Pandoc
-        run: sudo apt-get update && sudo apt-get install -y pandoc
+      # - name: Install Pandoc
+      #   run: sudo apt-get update && sudo apt-get install -y pandoc
 
-      - name: Process notes
-        run: python process_notes.py
+      # - name: Process notes
+      #   run: python process_notes.py
 
       - name: Install Hugo
         run: |
@@ -76,7 +76,7 @@ jobs:
         run: |
           echo "Current directory: $(pwd)"
           cd site
-          hugo
+          hugo --minify --baseURL "https://sergeybondarev.github.io/site-generator-test/"
           ls -la .
 
       - name: Debug before deploy
