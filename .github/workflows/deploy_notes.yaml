@@ -52,9 +52,22 @@ jobs:
 
       - name: Move markdown files
         run: |
-            cd site
-            mkdir ./content/posts
-            cp ../markdown_files/hello.md ./content/posts/hello.md
+          echo "Current directory: $(pwd)"
+          echo "Listing markdown_files directory:"
+          ls -la ../markdown_files || echo "markdown_files not found"
+          
+          cd site
+          mkdir -p ./content/posts
+          echo "Listing content/posts directory before copy:"
+          ls -la ./content/posts
+          
+          cp ../markdown_files/hello.md ./content/posts/hello.md
+          
+          echo "Listing content/posts directory after copy:"
+          ls -la ./content/posts
+          
+          echo "Content of copied file:"
+          cat ./content/posts/hello.md
 
       - name: Generate site
         run: hugo
