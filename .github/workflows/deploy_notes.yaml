@@ -79,6 +79,25 @@ jobs:
           hugo --minify --baseURL "https://sergeybondarev.github.io/site-generator-test/"
           ls -la .
 
+      - name: Add MathJax support
+        run: |
+          cd site
+          mkdir -p layouts/partials/hooks
+          
+          # Create head-end.html with MathJax
+          cat > layouts/partials/hooks/head-end.html << 'EOL'
+          <script>
+          MathJax = {
+            tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']],
+              displayMath: [['$$', '$$'], ['\\[', '\\]']],
+              processEscapes: true
+            }
+          };
+          </script>
+          <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+          EOL
+
       - name: Debug before deploy
         run: |
           echo "=== Current working directory ==="
