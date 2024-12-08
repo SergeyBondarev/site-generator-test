@@ -72,10 +72,8 @@ jobs:
       - name: Generate site
         run: |
           echo "Current directory: $(pwd)"
+          cd site
           hugo
-
-      - name: Log markdown files
-        run: ls -a ./content/posts
 
       - name: Log content
         run: ls -a ./public
