@@ -60,7 +60,7 @@ jobs:
         run: hugo
 
       - name: Log markdown files
-        run: ls -a ./contents/posts
+        run: ls -a ./content/posts
 
       - name: Log content
         run: ls -a ./public
