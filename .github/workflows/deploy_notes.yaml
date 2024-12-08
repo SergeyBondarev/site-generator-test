@@ -81,6 +81,7 @@ jobs:
 
       - name: Add MathJax support
         run: |
+          echo "Current directory: $(pwd)"
           cd site
           mkdir -p layouts/partials/hooks
           
