@@ -76,6 +76,19 @@ jobs:
           hugo
           ls -la .
 
+      - name: Debug before deploy
+        run: |
+          echo "=== Current working directory ==="
+          pwd
+          echo "=== Directory structure ==="
+          tree || find . -type d
+          echo "=== Content of site directory ==="
+          ls -la site/
+          echo "=== Content of site/public ==="
+          ls -la site/public || echo "Public directory not found!"
+          echo "=== Hugo version ==="
+          hugo version
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
