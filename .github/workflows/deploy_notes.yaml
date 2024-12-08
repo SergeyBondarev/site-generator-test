@@ -70,7 +70,9 @@ jobs:
           cat ./content/posts/hello.md
 
       - name: Generate site
-        run: hugo
+        run: |
+          echo "Current directory: $(pwd)"
+          hugo
 
       - name: Log markdown files
         run: ls -a ./content/posts
@@ -83,4 +85,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-
