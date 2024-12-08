@@ -63,7 +63,8 @@ jobs:
           echo "Listing content/posts directory before copy:"
           ls -la ./content/posts
           
-          cp ../markdown_files/hello.md ./content/posts/hello.md
+          echo "Copying all markdown files..."
+          cp ../markdown_files/*.md ./content/posts/ || echo "No markdown files found"
           
           echo "Listing content/posts directory after copy:"
           ls -la ./content/posts
