@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My New Hugo Site</title><link>https://sergeybondarev.github.io/site-generator-test/</link><description>Recent content on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate><atom:link href="https://sergeybondarev.github.io/site-generator-test/index.xml" rel="self" type="application/rss+xml"/><item><title>My First Post</title><link>https://sergeybondarev.github.io/site-generator-test/posts/hello/</link><pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate><guid>https://sergeybondarev.github.io/site-generator-test/posts/hello/</guid><description>&lt;p>Hello, world!&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My New Hugo Site</title><link>https://sergeybondarev.github.io/site-generator-test/</link><description>Recent content on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 08 Dec 2024 07:07:07 +0100</lastBuildDate><atom:link href="https://sergeybondarev.github.io/site-generator-test/index.xml" rel="self" type="application/rss+xml"/><item><title>Divergent series</title><link>https://sergeybondarev.github.io/site-generator-test/posts/divergent_series/</link><pubDate>Sun, 08 Dec 2024 07:07:07 +0100</pubDate><guid>https://sergeybondarev.github.io/site-generator-test/posts/divergent_series/</guid><description>&lt;p>Иногда может быть полезно приписать в том или ином смысле сумму ряду, который расходится. Можно сделать это множеством способов, например, методом Абеля или методом средних арифметических (по Чезаро).&lt;/p>
+&lt;h2 id="формальные-операции-над-расходящимися-рядами-примеры-из-харди">Формальные операции над расходящимися рядами, примеры из Харди&lt;/h2>
+&lt;p>Здесь просто порефлексируем к каким выводам можно прийти, если оперировать с расходящимися рядами.&lt;/p>
+&lt;p>Рассмотрим примеры расходящихся рядов, взятые из известной книги Харди (некоторые расходятся только при определенном наборе параметров)
+$$
+1 - 1 + 1 - 1 + \ldots,
+$$
+$$
+1 - 2 + 3 - 4 + \ldots,
+$$
+$$
+1 - 2 + 4 - 8 + \ldots,
+$$
+$$
+1 - 1! + 2! - 3! + \ldots,
+$$
+$$
+1 + 1 + 1 + 1 + \ldots,
+$$
+$$
+1 + 2 + 4 + 8 + \ldots,
+$$
+$$
+1 + e^{i \varphi} + e^{2 i \varphi} + \ldots,
+$$
+$$
+\frac{1}{2} + \cos \varphi + \cos 2 \varphi + \ldots,
+$$
+$$
+\sin \varphi + \sin 2 \varphi + \sin 3 \varphi + \ldots.
+$$&lt;/p></description></item><item><title>Hello post</title><link>https://sergeybondarev.github.io/site-generator-test/posts/hello/</link><pubDate>Fri, 06 Dec 2024 07:07:07 +0100</pubDate><guid>https://sergeybondarev.github.io/site-generator-test/posts/hello/</guid><description>&lt;p>Hello, world!&lt;/p>
 &lt;p>Todo list:&lt;/p>
 &lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> Fix the latex rendering&lt;/li>
