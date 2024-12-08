@@ -76,8 +76,8 @@ jobs:
         run: |
           echo "=== Directory structure ==="
           tree || find . -type d
-          mkdir -p layouts/partials/hooks
-          touch layouts/partials/hooks/head-end.html
+          mkdir -p site/layouts/partials/hooks
+          touch site/layouts/partials/hooks/head-end.html
           
           echo '<script>
           MathJax = {
@@ -88,7 +88,7 @@ jobs:
             }
           };
           </script>
-          <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>' > layouts/partials/hooks/head-end.html
+          <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>' > site/layouts/partials/hooks/head-end.html
 
       - name: Generate site
         run: |
