@@ -76,7 +76,7 @@ jobs:
         run: |
           echo "=== Directory structure ==="
           tree || find . -type d
-          mkdir -p site/layouts/_default/baseof.html
+          mkdir -p site/layouts/_default/
           touch site/layouts/_default/baseof.html
           
           echo '<head><script>
