@@ -72,13 +72,6 @@ jobs:
           echo "Content of copied file:"
           cat ./content/posts/hello.md
 
-      - name: Generate site
-        run: |
-          echo "Current directory: $(pwd)"
-          cd site
-          hugo --minify --baseURL "https://sergeybondarev.github.io/site-generator-test/"
-          ls -la .
-
       - name: Add MathJax support
         run: |
           echo "=== Directory structure ==="
@@ -96,6 +89,13 @@ jobs:
           };
           </script>
           <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>' > layouts/partials/hooks/head-end.html
+
+      - name: Generate site
+        run: |
+          echo "Current directory: $(pwd)"
+          cd site
+          hugo --minify --baseURL "https://sergeybondarev.github.io/site-generator-test/"
+          ls -la .
 
       - name: Debug before deploy
         run: |
